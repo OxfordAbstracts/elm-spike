@@ -1,0 +1,37 @@
+var _elm_lang$elm_architecture_tutorial$Buttons$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text('OXFORD ABSTRACTS'),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$button,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text(model.buttonName),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _elm_lang$elm_architecture_tutorial$Buttons$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{buttonName: _p0._0});
+	});
+var _elm_lang$elm_architecture_tutorial$Buttons$Model = function (a) {
+	return {buttonName: a};
+};
+var _elm_lang$elm_architecture_tutorial$Buttons$model = _elm_lang$elm_architecture_tutorial$Buttons$Model('BUTTON');
+var _elm_lang$elm_architecture_tutorial$Buttons$main = _elm_lang$html$Html$beginnerProgram(
+	{model: _elm_lang$elm_architecture_tutorial$Buttons$model, view: _elm_lang$elm_architecture_tutorial$Buttons$view, update: _elm_lang$elm_architecture_tutorial$Buttons$update})();
+var _elm_lang$elm_architecture_tutorial$Buttons$Change = function (a) {
+	return {ctor: 'Change', _0: a};
+};

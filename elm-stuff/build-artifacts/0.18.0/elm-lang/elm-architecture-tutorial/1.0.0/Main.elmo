@@ -1,0 +1,97 @@
+var _elm_lang$elm_architecture_tutorial$Main$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{color: _p0._0});
+	});
+var _elm_lang$elm_architecture_tutorial$Main$Model = function (a) {
+	return {color: a};
+};
+var _elm_lang$elm_architecture_tutorial$Main$model = _elm_lang$elm_architecture_tutorial$Main$Model('pink');
+var _elm_lang$elm_architecture_tutorial$Main$Change = function (a) {
+	return {ctor: 'Change', _0: a};
+};
+var _elm_lang$elm_architecture_tutorial$Main$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$input,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$placeholder('Type in a colour'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Events$onInput(_elm_lang$elm_architecture_tutorial$Main$Change),
+						_1: {ctor: '[]'}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'background-color', _1: model.color},
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('OXFORD ABSTRACTS'),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$button,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$style(
+										{
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'grey'},
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('Add track'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$button,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$style(
+											{
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'green'},
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Publish'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _elm_lang$elm_architecture_tutorial$Main$main = _elm_lang$html$Html$beginnerProgram(
+	{model: _elm_lang$elm_architecture_tutorial$Main$model, view: _elm_lang$elm_architecture_tutorial$Main$view, update: _elm_lang$elm_architecture_tutorial$Main$update})();
